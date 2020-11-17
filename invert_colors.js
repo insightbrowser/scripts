@@ -1,4 +1,4 @@
-(function invertcolors() { 
+function invertcolors() { 
     // the css we are going to inject
     var css = 'html {-webkit-filter: invert(100%);' +
         '-moz-filter: invert(100%);' + 
@@ -22,4 +22,8 @@
 
     //injecting the css to the head
     head.appendChild(style);
-})();
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+  invertcolors();
+});
