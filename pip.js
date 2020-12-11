@@ -5,10 +5,10 @@
       e.stopPropagation();
       console.log('stop prop');
     }, true);
-    setTimeout(()=>{
-      v.webkitSetPresentationMode('picture-in-picture');
-      console.log('pip');
-    }, 1000);
+//     setTimeout(()=>{
+//       v.webkitSetPresentationMode('picture-in-picture');
+//       console.log('pip');
+//     }, 1000);
   }
   
   function helper() {
