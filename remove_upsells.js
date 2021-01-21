@@ -6,7 +6,7 @@
 
  let toClick = {
    'quora.com': ['.qu-bg--blue button'],
-   'nytimes.com': ['.ReactModal__Overlay button'],
+   'nytimes.com': ['.ReactModal__Overlay button', '#vi_welcome_close'],
    'instagram.com': ['button span[aria-label=Close]'],
    'google.com': ['div[aria-label=promo] g-flat-button', '#continueButton', '.XPromoPopup__actions .XPromoPopup__action:nth-of-type(2) button', '.XPromoPill__closeButton'],
    'reddit.com': ['#continueButton', '.XPromoPopup__actions .XPromoPopup__action:nth-of-type(2) button', '.XPromoPill__closeButton']
