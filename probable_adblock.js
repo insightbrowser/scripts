@@ -60,6 +60,11 @@ var adBlockers = [
     "site": "google.com",
     "adText": "Ads",
     "adElementSelector": "._-is"
+  },
+  {
+    "site": "google.com",
+    "adText": "Ads",
+    "adElementSelector": ".commercial-unit-mobile-top"
   }
 ]
 
