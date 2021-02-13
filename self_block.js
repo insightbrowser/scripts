@@ -13,7 +13,7 @@
           font-weight: bold;
           font-size: 24px;
           color:#444;`)
-      overlaytext.innerText = 'Bad Habit Blocked'
+      overlaytext.innerText = 'Self-blocked'
       overlay.appendChild(overlaytext)
       document.body.appendChild(overlay)
     }
