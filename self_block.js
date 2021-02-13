@@ -4,7 +4,7 @@
       overlay.setAttribute('style', `
           font-family: -apple-system, BlinkMacSystemFont, sans-serif;
           position: fixed; left: 0; top: 0; right: 0; bottom: 0;
-          background: linear-gradient(hsla(0,0%,100%,.6) 0%,#fff);
+          background: rgba(0,0,0,0.95);
           z-index: 2147483647`)
       overlay.setAttribute('class', 'adblock')
       let overlaytext = document.createElement('div')
@@ -13,7 +13,7 @@
           font-weight: bold;
           font-size: 24px;
           color:#444;`)
-      overlaytext.innerText = 'Self-blocked'
+      overlaytext.innerText = 'Bad Habit Blocked'
       overlay.appendChild(overlaytext)
       document.body.appendChild(overlay)
     }
