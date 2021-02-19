@@ -3,7 +3,7 @@
    'reddit.com': ['.FooterAppUpsell', '.upsell_banner', '.TopNav__promoButton'],
    'google.com': ['.FooterAppUpsell', '.upsell_banner', '.TopNav__promoButton'],
    'nytimes.com': ['.expanded-dock'],
-   'duckduckgo.com': ['.js-atb-banner'],
+   'duckduckgo.com': ['.js-atb-banner', '.atb-banner'],
  }
 
  let toClick = {
