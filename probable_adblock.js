@@ -47,6 +47,11 @@ var adBlockers = [
     "adElementSelector": "ytm-rich-item-renderer"
   },
   {
+    "site": "linkedin.com",
+    "adText": "Promoted",
+    "adElementSelector": "li.feed-item"
+  },
+  {
     "site": "google.com",
     "adText": "Ad,Ad·",
     "adElementSelector": "#tads"
