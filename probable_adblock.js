@@ -72,6 +72,11 @@ var adBlockers = [
     "adElementSelector": ".commercial-unit-mobile-top"
   },
   {
+    "site": "google.com",
+    "adText": "Ads,Ads·",
+    "adElementSelector": ".ptJHdc"
+  },
+  {
     "site": "duckduckgo.com",
     "adText": "Ad",
     "adElementSelector": ".result--ad"
