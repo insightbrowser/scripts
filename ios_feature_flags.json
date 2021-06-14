@@ -1,0 +1,16 @@
+{
+    "features": [
+        {
+            "name": "sync",
+            "enabled": false
+        },
+        {
+            "name": "referralSystem",
+            "enabled": false
+        },
+        {
+            "name": "textToImage",
+            "enabled": false
+        }
+    ]
+}
