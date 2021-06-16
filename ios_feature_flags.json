@@ -1,6 +1,10 @@
 {
     "features": [
       {
+        "name": "desktop_ratings",
+        "enabled": false
+      },
+      {
         "name": "desktop_login",
         "enabled": false
       },
