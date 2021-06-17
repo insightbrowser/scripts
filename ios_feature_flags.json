@@ -1,16 +1,28 @@
 {
     "features": [
-        {
-            "name": "sync",
-            "enabled": false
-        },
-        {
-            "name": "referralSystem",
-            "enabled": false
-        },
-        {
-            "name": "textToImage",
-            "enabled": false
-        }
+      {
+        "name": "desktop_ratings",
+        "enabled": false
+      },
+      {
+        "name": "desktop_login",
+        "enabled": false
+      },
+      {
+        "name": "desktop_bookmarks",
+        "enabled": false
+      },
+      {
+        "name": "sync",
+        "enabled": false
+      },
+      {
+        "name": "referralSystem",
+        "enabled": false
+      },
+      {
+        "name": "textToImage",
+        "enabled": false
+      }
     ]
 }
