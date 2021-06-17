@@ -13,15 +13,15 @@
         "enabled": false
       },
       {
-        "name": "sync",
+        "name": "ios_sync",
         "enabled": false
       },
       {
-        "name": "referralSystem",
+        "name": "ios_referral_system",
         "enabled": false
       },
       {
-        "name": "textToImage",
+        "name": "ios_text_to_image",
         "enabled": false
       }
     ]
