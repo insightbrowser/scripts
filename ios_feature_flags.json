@@ -17,6 +17,10 @@
         "enabled": false
       },
       {
+        "name": "ios_premium_tier",
+        "enabled": false
+      },  
+      {
         "name": "ios_referral_system",
         "enabled": false
       },
