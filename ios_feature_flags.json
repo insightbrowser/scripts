@@ -6,7 +6,7 @@
       },
       {
         "name": "desktop_login",
-        "enabled": false
+        "enabled": true
       },
       {
         "name": "desktop_bookmarks",
