@@ -4,4 +4,5 @@
 ! Licence: https://creativecommons.org/licenses/by-sa/4.0/
 ! Version: 20210303
 
+example.com###a
 m.youtube.com##.mealbar-promo-renderer .ytm-mealbar-promo-button:first-of-type button
