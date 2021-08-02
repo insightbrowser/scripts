@@ -1,0 +1,918 @@
+! Title: 📸 YouTube: Yet Even More Pure Video Experience
+! Version: 06October2020v1-Beta
+! Expires: 3 days
+! Description: This list combines "YouTube: Even More Pure Video Experience", "Stop Autoplay For YouTube", and "Anti-Elsagate List". It only works with blockers that support the !#include tag in third-party lists, i.e. uBlock Origin.
+! As is the case for "YouTube: Even More Pure Video Experience", you'll need to separately subscribe to "YouTube: Pure Video Experience" as well, since the latter list is not made by me.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+!#include YouTubeEvenMorePureVideoExperience.txt
+! >>>>>>>> https://raw.githubusercontent.com/DandelionSprout/adfilt/master/YouTubeEvenMorePureVideoExperience.txt
+[Adblock Plus 3.6]
+! Title: ▶️ YouTube: Even More Pure Video Experience
+! Version: 28July2021v1
+! Expires: 6 days
+! Description: This list removes even more distracting or uncomfortable things on YouTube.
+! If you want to block even more things on top of these two lists, feel free to check out the anti-Autoplay (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt) and anti-Elsagate (https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt) lists that I've made.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! ——— IMPORTANT NOTICE (10th of July 2019): After my lists were relicenced to become more accomodative and easier to swallow for differently licenced projects, I have decided to simply add the entries from "YouTube: Pure Video Experience" to my lists instead of mandating the use of both lists. ———
+
+! Removes the YouTube Gaming button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="/gaming"])
+
+! Removes the Trending button in the left-hand menu
+m.youtube.com##.scbrr-tab[href="/feed/trending"]
+m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(2)
+
+! Removes the Discover button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/guide_builder"])
+
+! Removes the pop-out player button in the video player
+www.youtube.com##.ytp-button.ytp-miniplayer-button
+
+! Removes the Livestream button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*=UC4R8DWoMoI7CAwX8_LjQHig])
+
+! Removes the Homepage button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href="/"])
+www.youtube.com#?#ytd-mini-guide-entry-renderer:-abp-has(a[href="/"])
+m.youtube.com##.scbrr-tab[href="/"]
+m.youtube.com##ytm-pivot-bar-item-renderer:first-of-type
+
+! Removes the video store button in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*=UClgRkhTL3_hImCAmdLfDE4g])
+
+! Removes the app drawer in the top-right menu
+www.youtube.com#?##button:-abp-has([aria-label*=app])
+
+! Removes video suggestions
+##.ytp-endscreen-content
+youtube.com,youtubekids.com###related
+m.youtube.com##ytm-watch ytm-compact-video-renderer
+m.youtube.com##[section-identifier=related-items]
+/annotations_module.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io,tubo.peertube.uno#?#.pure-u-lg-1-5 > .h-box:-abp-has(.pure-u-14-24)
+hooktube.com#?#.col-lg-4:-abp-has(#video-list)
+! Seems to remove "Recommended for you" suggestions
+||youtube.com/related_ajax^
+
+! Removes the like/dislike counters
+youtube.com##ytd-toggle-button-renderer #text
+youtube.com###sentiment
+m.youtube.com##.slim-video-metadata-actions > [data-button-id]:first-of-type .button-renderer-text
+m.youtube.com##.slim-video-metadata-actions > [data-button-id]:nth-of-type(2) .button-renderer-text
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io,tubo.peertube.uno###likes, #dislikes
+hooktube.com###video-stats .text-right
+hooktube.com###progress-bar-likes
+twitch.tv#?#.ffz__tooltip .stats:-abp-contains(👍):-abp-contains(👎)
+
+! Removes the large grey [YouTube Kids / game info] buttons below gaming videos
+youtube.com##ytd-rich-metadata-renderer.ytd-rich-metadata-row-renderer
+m.youtube.com##ytm-watch-metadata-app-promo-renderer
+m.youtube.com##ytm-rich-metadata-renderer
+
+! Removes the Share arrow button in fullscreen mode and in embeds
+youtube.com,youtube-nocookie.com##button[class*=share-button]
+
+! Aims to prevent video suggestions from showing up when pausing embedded videos
+##.ytp-scroll-min
+##.ytp-pause-overlay
+youtube.com##.ytp-scroll-min
+youtube.com##.ytp-pause-overlay
+
+! Removes the frontpage link from the upper left YouTube logo (Not supported by ABP or AdBlock)
+youtube.com#?##logo:style(pointer-events: none !important; cursor: default !important)
+
+! Removes video epilogue suggestion overlays
+youtube.com##.ytp-ce-element-show
+
+! Removes a banner that promotes YouTube Premium
+youtube.com###masthead-ad
+
+! Believed to remove sponsored description links inserted by rights holders
+www.youtube.com##ytd-metadata-row-renderer
+
+! Removes the Explore buttons in the left-hand menu
+www.youtube.com#?#ytd-guide-entry-renderer:-abp-has(a[href*="feed/explore"])
+www.youtube.com#?#ytd-mini-guide-entry-renderer:-abp-has(a[href*="feed/explore"])
+
+! Aims to remove the "Recommended" tickers on top of YouTube embeds
+##.ytp-cards-teaser
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— Comment sections that are not covered by "Pure Viewing Experience" ———
+
+! Removes the comment section on phones
+m.youtube.com##ytm-comment-section-renderer
+
+! Removes the comment section on livestreams
+youtube.com##ytd-live-chat-frame
+
+! Removes the comment section on livestream VoDs
+youtube.com###watch-discussion
+
+! Removes the comment section on third-party GUIs
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io###comments
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "Disable Polymer" mode ———
+
+! Removes the Homepage button in the left-hand menu when using "Disable polymer"
+www.youtube.com###what_to_watch-guide-item
+
+! Removes the video store and YouTube Gaming buttons in the left-hand menu when using "Disable polymer"
+www.youtube.com##li.guide-section:nth-of-type(5) > .personal-item.guide-item-container > .yt-box.yt-uix-tdl.guide-user-links
+
+! Removes the Discover button in the left-hand menu when using "Disable polymer"
+www.youtube.com##li.guide-section:nth-of-type(4)
+
+! Removes the Trending button in the left-hand menu when using "Disable polymer"
+www.youtube.com###trending-guide-item
+
+! Attempts to remove YouTube frontpage recommended videos and channels when using "Disable polymer" (and using YouTube in a Germanic language)
+www.youtube.com#?#.feed-item-container.browse-list-item-container:-abp-has(.shelf-title-annotation:-abp-contains( for ))
+
+! Removes the like/dislike counters
+www.youtube.com##.like-button-renderer-like-button > .yt-uix-button-content
+www.youtube.com##.like-button-renderer-dislike-button > .yt-uix-button-content
+www.youtube.com##.video-extras-sparkbars
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— "TV" mode ———
+
+! Removes most video suggestions in TV mode
+! Sadly, at least one suggestion had to remain in each row, or else you couldn't browse down to the Home and Search buttons.
+www.youtube.com##.exp-enable-live-seeking > #leanback > #app-markup > #watch > #bottom-half .pivot-row .watchable-tile:nth-of-type(1n+2)
+
+! Removes the Trending button in the top bar. At least I think it's the Trending button.
+www.youtube.com##div.top-nav-tab:nth-of-type(2)
+
+! Removes the Gaming button in the top bar
+www.youtube.com#?#div.top-nav-tab:-abp-contains(/^Gaming$/)
+
+! ————————————————————————————————————————————————————————————————
+
+! ——— YouTube Android apps (Requires "AdGuard for Android") ———
+
+!#if adguard_app_android
+! Removes comments on video pages
+||youtube.com/live_chat_fragments_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+||youtube.com/comment_service_ajax?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+
+! Removes video suggestions
+/annotations_module.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+/endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+||youtube.com/annotations_invideo?$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$app=com.google.android.youtube|com.google.android.apps.youtube.music|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+!#endif
+
+! ————————————————————————————————————————————————————————————————
+
+! Below are entries that I borrowed verbatim (except for adding extra domain coverage) from «YouTube: Pure Video Experience», which was maintained by monztA until 2017, and which is currently believed to have no known copyright statements or licences.
+
+! Removes comments on video pages
+||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
+||youtube.com/comment_service_ajax?$domain=youtube.com|youtu.be|youtube-nocookie.com
+youtube.com###comments
+! Removes all annotations in videos
+||youtube.com/annotations_invideo?$object-subrequest
+! HTML5 version
+youtube.com,youtube-nocookie.com##.video-annotations
+! Removes video suggestions on video pages
+youtube.com##.watch-sidebar-body > #watch-related > .related-list-item
+! Removes recommended channels on home page, susbcriptions page and feed
+youtube.com##.home .branded-page-v2-secondary-col
+youtube.com##.feed .branded-page-v2-secondary-col
+youtube.com##.guide-builder-v2 .branded-page-v2-secondary-col
+! Removes sharing tab below videos
+||youtube.com/share_ajax?action_get_share_box=1&video_id=$xmlhttprequest
+youtube.com##.action-panel-trigger[role=button][data-trigger-for=action-panel-share]
+youtube.com##.yt-uix-button[data-trigger-for=action-panel-share]
+! Removes recommended and featured videos in the endscreen
+||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com|youtu.be|youtube-nocookie.com
+youtube.com,youtube-nocookie.com##.html5-endscreen-content
+youtube.com,youtube-nocookie.com##.html5-endscreen
+! Removes related/featured/popular channels on channel pages
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip
+youtube.com##.branded-page-v2-secondary-col > .branded-page-related-channels > .yt-uix-tooltip + .branded-page-related-channels-list
+! "Subscribe to see more videos from this channel" on home page after watching some video of a channel
+youtube.com###channel-subscription-promo-in-feed
+! <<<<<<<< https://raw.githubusercontent.com/DandelionSprout/adfilt/master/YouTubeEvenMorePureVideoExperience.txt
+!#include StopAutoplayOnYouTube.txt
+! >>>>>>>> https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt
+[Adblock Plus 3.4]
+! Title: 🎬 Stop Autoplay On Video Sites
+! Expires: 7 days
+! Version: 02April2021v1
+! Description: Are you tired of having to turn off autoplay on YouTube, Vimeo, and other video sites every time you e.g. go to incognito mode? Do you work in classrooms/courserooms and don't want to accidentally show unfitting videos to your students/coursetakers? Are you worried of having to use specific extensions just for that purpose? Then this list is for you.
+! Special thanks to https://github.com/llacb47 for waterproofing large parts of this list.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! I offer a €15 bounty to anyone who can figure out how to automatically turn off autoplay on Dailymotion through one or more uBlock Origin entries, payable by PayPal.
+
+! ——— YouTube ———
+! Note: Video suggestions after the video is finished, will not be shown.
+/endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com
+youtube.com###head.ytd-compact-autoplay-renderer
+youtube.com##.checkbox-on-off
+youtube.com##.watch-sidebar-head
+m.youtube.com##.ytm-autonav-bar
+!#if !ext_ublock
+/endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+!#endif
+
+! ——— Vimeo ———
+&stream_pos=0&autoplay=true$xmlhttprequest,domain=vimeo.com
+vimeo.com##.iris_progress-container
+vimeo.com##.pagination_holder
+vimeo.com##._16rrx
+!#if !ext_ublock
+vimeo.com#%#AG_setConstant('vimeo.clip_page_config.continuous_play_enabled', 'false');
+!#endif
+
+! ——— Rumble ———
+||rumble.com/embedJS/u3/?request=related$xmlhttprequest
+
+! ——— TED ———
+!#if !ext_ublock
+! Note: Once the outro screen is triggered and blocked, the page has to be reloaded to play the same video again. It also remains stuck on an ominously red-tinted frame when it happens.
+||pb.tedcdn.com/bumpers/hls/video/out/$xmlhttprequest,domain=ted.com
+!#endif
+
+! ——— BBC Reel ———
+||bbci.co.uk/plugins/onwardJourneyHTML/*/js/onwardJourney.js^
+
+! ——— Ixigua - 西瓜视频 ———
+! Note: Also removes video recommendations
+||ixigua.com/api/feedv2^
+
+! ——— Help wanted for: ———
+! Dailymotion (Bounty: 15€)
+! Sites using JW Player (e.g. Mediaite)
+! Gfycat
+! YouTube channel trailers (https://github.com/DandelionSprout/adfilt/issues/69 is open for help and comments on it.)
+! YouTube Kids
+
+!#include uBO%20list%20extensions/StopAutoplayOnYouTube-uBOExtension.txt
+! >>>>>>>> https://raw.githubusercontent.com/DandelionSprout/adfilt/master/uBO%20list%20extensions/StopAutoplayOnYouTube-uBOExtension.txt
+! ——— Vimeo ———
+vimeo.com##+js(set, vimeo.clip_page_config.continuous_play_enabled, false)
+
+! ——— TED ———
+ted.com##+js(sid, d.period, 1000)
+ted.com##.css-1dg07lz:has-text(Up next)
+! <<<<<<<< https://raw.githubusercontent.com/DandelionSprout/adfilt/master/uBO%20list%20extensions/StopAutoplayOnYouTube-uBOExtension.txt
+! <<<<<<<< https://raw.githubusercontent.com/DandelionSprout/adfilt/master/StopAutoplayOnYouTube.txt
+!#include Anti-Elsagate%20List.txt
+! >>>>>>>> https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt
+[Adblock Plus 3.6]
+! Title: ☣️ Anti-Elsagate List
+! Version: 23July2021v1
+! Expires: 3 days
+! Description: This list aims to remove particularly disturbing content on YouTube, Vimeo, DailyMotion, Internet Archive, and Rumble that targets young children, as well as nursery rhymes, "Finger Family", "Wrong Heads", and other things that are hotbeds for extremely unproductive videos. Also supports YouTube on mobile browsers (but sadly not the apps).
+! Motivation: I do not think of this as protecting children. I see this as protecting all of mankind. No humans, old or young, should need to be subjected to Elsagate-style material.
+! Note that in order to be really certain of avoiding Elsagate, especially in the case of children, this list also deactivates Autoplay and end-of-video links, but at the moment only on desktop browsers.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+
+! —— YouTube on desktop browsers, including "Disable Polymer" mode and TV mode ——
+!#if !adguard
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Nursery)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Finger Family/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Family Finger/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/NURSERY RHYMES/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Fingers Family/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Mickey Mouse New Cartoon/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/New Cartoon For Kids/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Elsa, Hulk/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Wrong Heads/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Spinning Wheel Game/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Kiddie Land)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Slime Bath/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Pups Save Cartoons/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Baby Elsa/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(SuperZoo )
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/BABY HULK /i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Frozen Elsa/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Webs & Tiaras)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/slime in the pool/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Jigsaw Puzzles)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Malo Kid)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Hulk & Elsa/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Funny Superhero movie)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(gets STABBED)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/ELSA PREGNANT/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Funny Superheroes /i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Snot Rocket/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Elsa Hulk/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Superheroes Action /i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Police Nerf wars/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Spiderman SAW)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/BAD BABY/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Superhero Action )
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Police spiderman/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Venom, Hulk/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/ cartoon for kids/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Bayby Fun)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Kids Toon)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Equestria Girls Princess/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Wrong kid matching/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Cartoons Sun & Moon/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Ivy Mouse/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(BLOODY Hand)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(TasMil)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Rimas Infantiles/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Transforms with Animation)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Stuck in Elevator/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(♫ Baby)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Attacked by Bacteria/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Full Episodese)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/Gets Impatience While/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(طفل ميكي ماوس)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(Learn Colors)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+www.youtube.com#?##dismissable,[lockup],ytd-metadata-row-renderer,.yt-lockup-tile,.video-list-item,.watchable-tile:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
+
+! —— YouTube on mobile browsers ——
+m.youtube.com#?#.compact-media-item:-abp-contains(Nursery)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Finger Family/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Family Finger/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Nursery Rhymes/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Fingers Family/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Mickey Mouse New Cartoon/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/New Cartoon For Kids/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Elsa, Hulk/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Wrong Heads/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Spinning Wheel Game/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Kiddie Land)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Slime Bath/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Pups Save Cartoons/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Baby Elsa/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(SuperZoo )
+m.youtube.com#?#.compact-media-item:-abp-contains(/BABY HULK /i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Frozen Elsa/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Webs & Tiaras)
+m.youtube.com#?#.compact-media-item:-abp-contains(/slime in the pool/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Jigsaw Puzzles)
+m.youtube.com#?#.compact-media-item:-abp-contains(Malo Kid)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Hulk & Elsa/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Funny Superhero movie)
+m.youtube.com#?#.compact-media-item:-abp-contains(gets STABBED)
+m.youtube.com#?#.compact-media-item:-abp-contains(/ELSA PREGNANT/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Funny Superheroes /i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Snot Rocket/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Elsa Hulk/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Superheroes Action /i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Police Nerf wars/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Spiderman SAW)
+m.youtube.com#?#.compact-media-item:-abp-contains(/BAD BABY/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Superhero Action )
+m.youtube.com#?#.compact-media-item:-abp-contains(/Police Spiderman/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Venom, Hulk/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/ cartoon for kids/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Bayby Fun)
+m.youtube.com#?#.compact-media-item:-abp-contains(Kids Toon)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Equestria Girls Princess/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Wrong kid matching/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Cartoons Sun & Moon/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Ivy Mouse/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(BLOODY Hand)
+m.youtube.com#?#.compact-media-item:-abp-contains(TasMil)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Rimas Infantiles/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Transforms with Animation)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Stuck in Elevator/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(♫ Baby)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Attacked by Bacteria/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(Full Episodese)
+m.youtube.com#?#.compact-media-item:-abp-contains(/Gets Impatience While/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(طفل ميكي ماوس)
+m.youtube.com#?#.compact-media-item:-abp-contains(Learn Colors)
+m.youtube.com#?#.compact-media-item:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+m.youtube.com#?#.compact-media-item:-abp-contains(SONIC):-abp-contains(BABY)
+
+! YouTube in "Kids" mode
+!#if !adguard
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Nursery)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Finger Family/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Family Finger/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/NURSERY RHYMES/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Fingers Family/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Mickey Mouse New Cartoon/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/New Cartoon For Kids/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Elsa, Hulk/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Wrong Heads/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Spinning Wheel Game/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Kiddie Land)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Slime Bath/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Pups Save Cartoons/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Baby Elsa/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(SuperZoo )
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/BABY HULK /i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Frozen Elsa/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Webs & Tiaras)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/slime in the pool/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Jigsaw Puzzles)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Malo Kid)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Hulk & Elsa/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Funny Superhero movie)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(gets STABBED)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/ELSA PREGNANT/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Funny Superheroes /i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Snot Rocket/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Elsa Hulk/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Superheroes Action /i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Police Nerf wars/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Spiderman SAW)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/BAD BABY/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Superhero Action )
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Police spiderman/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Venom, Hulk/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/ cartoon for kids/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Bayby Fun)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Kids Toon)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Equestria Girls Princess/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Wrong kid matching/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Cartoons Sun & Moon/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Ivy Mouse/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(BLOODY Hand)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(TasMil)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Rimas Infantiles/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Transforms with Animation)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Stuck in Elevator/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(♫ Baby)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Attacked by Bacteria/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Full Episodese)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/Gets Impatience While/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(طفل ميكي ماوس)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(Learn Colors)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+youtubekids.com#?#.ytk-item-section-renderer[id^=ytk-compact-video-renderer-],#related > ytk-compact-video-renderer:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
+
+! —— Prevents autoplay on YouTube ——
+/watch_autoplayrenderer.js$script,domain=youtube.com
+
+! —— DailyMotion ——
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Nursery)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Finger Family/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Family Finger/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Nursery Rhymes/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Fingers Family/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Mickey Mouse New Cartoon/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/New Cartoon For Kids/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Elsa, Hulk/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Wrong Heads/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Spinning Wheel Game/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Kiddie Land)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Slime Bath/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Pups Save Cartoons/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Baby Elsa/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(SuperZoo )
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/BABY HULK /i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Frozen Elsa/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Webs & Tiaras)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/slime in the pool/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Jigsaw Puzzles)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Malo Kid)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Hulk & Elsa/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Funny Superhero movie)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(gets STABBED)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/ELSA PREGNANT/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Funny Superheroes /i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Snot Rocket/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Elsa Hulk/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Superheroes Action /i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Police Nerf wars/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Spiderman SAW)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/BAD BABY/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Superhero Action )
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Police Spiderman/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Venom, Hulk/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/ cartoon for kids/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Bayby Fun)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Kids Toon)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Equestria Girls Princess/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Wrong kid matching/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Cartoons Sun & Moon/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Ivy Mouse/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(BLOODY Hand)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(TasMil)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Rimas Infantiles/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Transforms with Animation)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Stuck in Elevator/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(♫ Baby)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Attacked by Bacteria/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Full Episodese)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/Gets Impatience While/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(طفل ميكي ماوس)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(Learn Colors)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+dailymotion.com#?#[class*=__videoCard___]:-abp-contains(SONIC):-abp-contains(BABY)
+
+! —— Vimeo on browsers ——
+!#if !adguard
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Nursery)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Finger Family/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Family Finger/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Nursery Rhymes/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Fingers Family/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Mickey Mouse New Cartoon/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/New Cartoon For Kids/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Elsa, Hulk/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Wrong Heads/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Spinning Wheel Game/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Kiddie Land)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Slime Bath/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Pups Save Cartoons/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Baby Elsa/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(SuperZoo )
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/BABY HULK /i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Frozen Elsa/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Webs & Tiaras)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/slime in the pool/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Jigsaw Puzzles)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Malo Kid)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Hulk & Elsa/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Funny Superhero movie)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(gets STABBED)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/ELSA PREGNANT/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Funny Superheroes /i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Snot Rocket/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Elsa Hulk/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Superheroes Action /i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Police Nerf wars/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Spiderman SAW)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/BAD BABY/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Superhero Action )
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Police Spiderman/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Venom, Hulk/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/ cartoon for kids/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Bayby Fun)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Kids Toon)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Equestria Girls Princess/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Wrong kid matching/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Cartoons Sun & Moon/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Ivy Mouse/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(BLOODY Hand)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(TasMil)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Rimas Infantiles/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Transforms with Animation)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Stuck in Elevator/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(♫ Baby)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Attacked by Bacteria/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Full Episodese)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/Gets Impatience While/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(طفل ميكي ماوس)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(Learn Colors)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+vimeo.com#?#.span-1.iris_p_infinite__item,.contextclip-items > span > article:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
+
+! —— Prevents curious children from inadvertently downloading the Vimeo app, which'd bypass this list ——
+vimeo.com#?#.js-app_banner.app_banner
+
+! —— Internet Archive ——
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Nursery)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Finger Family/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Family Finger/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Nursery Rhymes/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Fingers Family/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Mickey Mouse New Cartoon/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/New Cartoon For Kids/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Elsa, Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Wrong Heads/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Spinning Wheel Game/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Kiddie Land)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Slime Bath/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Pups Save Cartoons/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Baby Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(SuperZoo )
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/BABY HULK /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Frozen Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Webs & Tiaras)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/slime in the pool/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Jigsaw Puzzles)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Malo Kid)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Hulk & Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Funny Superhero movie)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(gets STABBED)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/ELSA PREGNANT/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Funny Superheroes /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Snot Rocket/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Elsa Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Superheroes Action /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Police Nerf wars/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Spiderman SAW)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/BAD BABY/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Superhero Action )
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Police Spiderman/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Venom, Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/ cartoon for kids/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Bayby Fun)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Kids Toon)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Equestria Girls Princess/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Wrong kid matching/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Cartoons Sun & Moon/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Ivy Mouse/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(BLOODY Hand)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(TasMil)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Rimas Infantiles/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Transforms with Animation)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Stuck in Elevator/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(♫ Baby)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Attacked by Bacteria/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Full Episodese)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/Gets Impatience While/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(طفل ميكي ماوس)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(Learn Colors)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.hov.item-ia:-abp-contains(SONIC):-abp-contains(BABY)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Nursery)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Finger Family/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Family Finger/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Nursery Rhymes/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Fingers Family/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Mickey Mouse New Cartoon/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/New Cartoon For Kids/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Elsa, Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Wrong Heads/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Spinning Wheel Game/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Kiddie Land)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Slime Bath/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Pups Save Cartoons/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Baby Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(SuperZoo )
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/BABY HULK /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Frozen Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Webs & Tiaras)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/slime in the pool/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Jigsaw Puzzles)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Malo Kid)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Hulk & Elsa/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Funny Superhero movie)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(gets STABBED)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/ELSA PREGNANT/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Funny Superheroes /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Snot Rocket/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Elsa Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Superheroes Action /i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Police Nerf wars/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Spiderman SAW)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/BAD BABY/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Superhero Action )
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Police Spiderman/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Venom, Hulk/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/ cartoon for kids/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Bayby Fun)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Kids Toon)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Equestria Girls Princess/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Wrong kid matching/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Cartoons Sun & Moon/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Ivy Mouse/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(BLOODY Hand)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(TasMil)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Rimas Infantiles/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Transforms with Animation)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Stuck in Elevator/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(♫ Baby)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Attacked by Bacteria/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Full Episodese)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/Gets Impatience While/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(طفل ميكي ماوس)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(Learn Colors)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+archive.org,archivebyd3rzt3ehjpm4c3bjkyxv3hjleiytnvxcn7x32psn2kxcuid.onion#?#div.account-ia.item-ia:-abp-contains(SONIC):-abp-contains(BABY)
+
+! —— Rumble ——
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Nursery)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Finger Family/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Family Finger/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Nursery Rhymes/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Fingers Family/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Mickey Mouse New Cartoon/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/New Cartoon For Kids/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Elsa, Hulk/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Wrong Heads/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Spinning Wheel Game/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Kiddie Land)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Slime Bath/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Pups Save Cartoons/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Baby Elsa/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(SuperZoo )
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/BABY HULK /i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Frozen Elsa/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Webs & Tiaras)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/slime in the pool/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Jigsaw Puzzles)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Malo Kid)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Hulk & Elsa/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Funny Superhero movie)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(gets STABBED)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/ELSA PREGNANT/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Funny Superheroes /i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Snot Rocket/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Elsa Hulk/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Superheroes Action /i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Police Nerf wars/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Spiderman SAW)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/BAD BABY/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Superhero Action )
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Police Spiderman/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Venom, Hulk/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/ cartoon for kids/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Bayby Fun)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Kids Toon)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Equestria Girls Princess/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Wrong kid matching/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Cartoons Sun & Moon/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Ivy Mouse/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(BLOODY Hand)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(TasMil)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Rimas Infantiles/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Transforms with Animation)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Stuck in Elevator/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(♫ Baby)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Attacked by Bacteria/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Full Episodese)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/Gets Impatience While/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(طفل ميكي ماوس)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(Learn Colors)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+rumble.com#?#.gsc-result.gsc-webResult:-abp-contains(SONIC):-abp-contains(BABY)
+
+! —— Hooktube ——
+hooktube.com#?#.mb-2.row:-abp-contains(Nursery)
+hooktube.com#?#.mb-2.row:-abp-contains(/Finger Family/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Family Finger/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Nursery Rhymes/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Fingers Family/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Mickey Mouse New Cartoon/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/New Cartoon For Kids/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Elsa, Hulk/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Wrong Heads/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Spinning Wheel Game/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Kiddie Land)
+hooktube.com#?#.mb-2.row:-abp-contains(/Slime Bath/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Pups Save Cartoons/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Baby Elsa/i)
+hooktube.com#?#.mb-2.row:-abp-contains(SuperZoo )
+hooktube.com#?#.mb-2.row:-abp-contains(/BABY HULK /i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Frozen Elsa/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Webs & Tiaras)
+hooktube.com#?#.mb-2.row:-abp-contains(/slime in the pool/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Jigsaw Puzzles)
+hooktube.com#?#.mb-2.row:-abp-contains(Malo Kid)
+hooktube.com#?#.mb-2.row:-abp-contains(/Hulk & Elsa/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Funny Superhero movie)
+hooktube.com#?#.mb-2.row:-abp-contains(gets STABBED)
+hooktube.com#?#.mb-2.row:-abp-contains(/ELSA PREGNANT/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Funny Superheroes /i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Snot Rocket/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Elsa Hulk/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Superheroes Action /i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Police Nerf wars/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Spiderman SAW)
+hooktube.com#?#.mb-2.row:-abp-contains(/BAD BABY/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Superhero Action )
+hooktube.com#?#.mb-2.row:-abp-contains(/Police Spiderman/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Venom, Hulk/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/ cartoon for kids/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Bayby Fun)
+hooktube.com#?#.mb-2.row:-abp-contains(Kids Toon)
+hooktube.com#?#.mb-2.row:-abp-contains(/Equestria Girls Princess/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Wrong kid matching/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Cartoons Sun & Moon/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Ivy Mouse/i)
+hooktube.com#?#.mb-2.row:-abp-contains(BLOODY Hand)
+hooktube.com#?#.mb-2.row:-abp-contains(TasMil)
+hooktube.com#?#.mb-2.row:-abp-contains(/Rimas Infantiles/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Transforms with Animation)
+hooktube.com#?#.mb-2.row:-abp-contains(/Stuck in Elevator/i)
+hooktube.com#?#.mb-2.row:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+hooktube.com#?#.mb-2.row:-abp-contains(♫ Baby)
+hooktube.com#?#.mb-2.row:-abp-contains(/Attacked by Bacteria/i)
+hooktube.com#?#.mb-2.row:-abp-contains(Full Episodese)
+hooktube.com#?#.mb-2.row:-abp-contains(/Gets Impatience While/i)
+hooktube.com#?#.mb-2.row:-abp-contains(طفل ميكي ماوس)
+hooktube.com#?#.mb-2.row:-abp-contains(Learn Colors)
+hooktube.com#?#.mb-2.row:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+hooktube.com#?#.mb-2.row:-abp-contains(SONIC):-abp-contains(BABY)
+
+! —— Invidio.us ——
+!#if !adguard
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Nursery)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Finger Family/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Family Finger/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Nursery Rhymes/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Fingers Family/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Mickey Mouse New Cartoon/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/New Cartoon For Kids/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Elsa, Hulk/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Wrong Heads/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Spinning Wheel Game/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Kiddie Land)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Slime Bath/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Pups Save Cartoons/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Baby Elsa/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(SuperZoo )
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/BABY HULK /i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Frozen Elsa/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Webs & Tiaras)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/slime in the pool/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Jigsaw Puzzles)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Malo Kid)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Hulk & Elsa/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Funny Superhero movie)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(gets STABBED)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/ELSA PREGNANT/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Funny Superheroes /i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Snot Rocket/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Elsa Hulk/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Superheroes Action /i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Police Nerf wars/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Spiderman SAW)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/BAD BABY/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Superhero Action )
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Police Spiderman/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Venom, Hulk/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/ cartoon for kids/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Bayby Fun)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Kids Toon)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Equestria Girls Princess/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Wrong kid matching/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Cartoons Sun & Moon/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Ivy Mouse/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(BLOODY Hand)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(TasMil)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Rimas Infantiles/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Transforms with Animation)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Stuck in Elevator/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Mickey Mouse & Minnie Mouse/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(♫ Baby)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Attacked by Bacteria/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Full Episodese)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/Gets Impatience While/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(طفل ميكي ماوس)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(Learn Colors)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(/PAW Patrol/i):-abp-contains(/Horror/i)
+invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion#?#.pure-u-md-1-4,.pure-u-lg-1-5 a[href^="/watch"]:-abp-contains(SONIC):-abp-contains(BABY)
+!#endif
+
+! Adobe Flash and HTML5 "game" "sites"
+||mygames4girls.com^$document
+||dressupwho.com^$document
+||crazygames.no^$document
+||poki.no^$document
+!#if false
+||mygames4girls.com^
+||dressupwho.com^
+||crazygames.no^
+||poki.no^
+!#endif
+gamepix.com##a[href*=doctor]
+||gamepix.com/*doctor$document
+!#if false
+||gamepix.com/*doctor
+!#endif
+
+! Google Web Store (Entries are largely only necessary if both AdGuard for Windows/Mac _and_ a Chrome OS user agent is used)
+! I offer a 10€ bounty to anyone who know how to make the entries work within their intended browsers with regular browser extensions (e.g. Chrome Web Store in Chrome with (uBO|AdGuard Browser Extension|ABP); Mozilla Add-ons in Firefox)
+chrome.google.com##a[href*=toddler][href*=vaccine]
+chrome.google.com##a[href*=baby-elsa]
+chrome.google.com##a[href*=baby-hazel]
+chrome.google.com##a[href*=dentist]
+chrome.google.com##a[href*=lip][href*=inject]
+chrome.google.com##a[href*=surgery]
+chrome.google.com##a[href*=doctor][href*=game]
+chrome.google.com##a[href*=hospital]
+||chrome.google.com/*toddler*vaccine$document
+||chrome.google.com/*baby-elsa$document
+||chrome.google.com/*baby-hazel$document
+||chrome.google.com/*dentist$document
+||chrome.google.com/*lip*inject$document
+||chrome.google.com/*surgery$document
+||chrome.google.com/*doctor*game$document
+||chrome.google.com/*hospital$document
+
+! Microsoft Store
+microsoft.com##a[href*=dentist]
+microsoft.com##a[href*=surgery]
+||www.microsoft.com/*dentist$document
+||www.microsoft.com/*surgery$document
+
+!#include StopAutoplayOnYouTube.txt
+! <<<<<<<< https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Anti-Elsagate%20List.txt
+
