@@ -7,3 +7,4 @@
 example.com###a
 m.youtube.com##.mealbar-promo-renderer .ytm-mealbar-promo-button:first-of-type button
 www.reddit.com##.XPromoPopup__content .XPromoPopup__action:nth-of-type(2) button
+www.quora.com##.kPwyaT button
