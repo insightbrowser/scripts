@@ -1,0 +1,7 @@
+[Adblock Plus 2.0]
+! Title: Mobile Annoyances Delete
+! Homepage: 
+! Licence: https://creativecommons.org/licenses/by-sa/4.0/
+! Version: 20210303
+
+www.reddit.com##.TopNav .TopNav__promoButton
