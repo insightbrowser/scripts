@@ -1,0 +1,7 @@
+[Adblock Plus 2.0]
+! Title: Mobile Annoyances Autoclick
+! Homepage: 
+! Licence: https://creativecommons.org/licenses/by-sa/4.0/
+! Version: 20210303
+
+m.youtube.com##.mealbar-promo-renderer .ytm-mealbar-promo-button:first-of-type button
