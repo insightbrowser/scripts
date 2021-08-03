@@ -11,4 +11,4 @@ www.reddit.com##.XPromoPill__closeButton
 www.quora.com##.kPwyaT button
 www.nytimes.com##.ReactModal__Overlay button
 www.nytimes.com###vi_welcome_close
-instagram.com#button span[aria-label=Close]
+instagram.com##button span[aria-label=Close]
