@@ -18,7 +18,7 @@
       },
       {
         "name": "ios_premium_tier",
-        "enabled": true
+        "enabled": false
       },  
       {
         "name": "ios_referral_system",
