@@ -8,6 +8,7 @@ example.com###a
 m.youtube.com##.mealbar-promo-renderer .ytm-mealbar-promo-button:first-of-type button
 www.reddit.com##.AppSelectorModal__actionButton #continueButton
 www.reddit.com##.XPromoPill__closeButton
+www.reddit.com##button.XPromoPopup__actionButton
 www.quora.com##.kPwyaT button
 www.nytimes.com##.ReactModal__Overlay button
 www.nytimes.com###vi_welcome_close
