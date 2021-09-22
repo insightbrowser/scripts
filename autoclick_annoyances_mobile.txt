@@ -13,3 +13,4 @@ www.quora.com##.kPwyaT button
 www.nytimes.com##.ReactModal__Overlay button
 www.nytimes.com###vi_welcome_close
 instagram.com##button span[aria-label=Close]
+www.bbc.com##button.tp-close.tp-active
