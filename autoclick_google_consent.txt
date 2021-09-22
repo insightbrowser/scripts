@@ -1,0 +1,8 @@
+[Adblock Plus 2.0]
+! Title: Google EU Cookie Consent
+! Homepage: 
+! Licence: https://creativecommons.org/licenses/by-sa/4.0/
+! Version: 20210303
+
+google.*##.VDity button:last-child
+m.youtube.*##.dialog-buttons c3-material-button:last-child button
