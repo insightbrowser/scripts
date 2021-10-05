@@ -12,3 +12,4 @@ www.quora.com##.spacing_log_header_main button
 ##.xpromopopup
 ##.addlinkbar
 ##.upsell_banner
+www.google.com##.FAVrq.mB14jb
