@@ -1,0 +1,7 @@
+[Adblock Plus 2.0]
+! Title: Smart banner block
+! Homepage: 
+! Licence: https://creativecommons.org/licenses/by-sa/4.0/
+! Version: 1
+
+*##div.smartbanner
