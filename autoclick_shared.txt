@@ -1,0 +1,4 @@
+! Title: Autoclick Shared
+! Homepage: 
+! Licence: https://creativecommons.org/licenses/by-sa/4.0/
+! Version: 20211110
