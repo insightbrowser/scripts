@@ -54,24 +54,33 @@
     return hasForm
   };
   
-  const isPossibleAcceptCookies = (button) => {
-    // We don't want to autoclick buttons inside forms
-    if (hasFormAncestor(button)) {
+  const isPossibleAcceptCookies = (element) => {
+    // We don't want to autoclick elements inside forms
+    if (hasFormAncestor(element)) {
       return null;
+    }
+
+    // If anchor element, check that is does not have an href that navigates out of the page
+    if (element instanceof HTMLAnchorElement && element.href && !element.href.startsWith('#')) {
+      const href = element.href.replace(document.location.href, '');
+
+      if (!href.startsWith('#')) {
+        return null;
+      }
     }
   
     const mustHaveWords = [ 'ok', 'accept', 'yes', 'continue', 'agree' ];
 
-    // Since we don't know the order of the button we are testing in the modal
+    // Since we don't know the order of the element we are testing in the modal
     // Let's look for the ones with positive words
-    const innerText = button.innerText.toLocaleLowerCase();
+    const innerText = element.innerText.toLocaleLowerCase();
     
     if (!mustHaveWords.some((word) => innerText.match(`\\b${ word }\\b`))) {
       return null;
     }
   
     const highestParent = () => {
-      let parent = button.parentElement;
+      let parent = element.parentElement;
 
       if (parent === document.body) {
         return null;
@@ -93,31 +102,31 @@
     const foundCookies = parentInnerText.includes('cookie') || parentInnerText.includes('cookies');
     const hasEnoughSize = parent.clientHeight >= COOKIES_MODAL_MIN_HEIGHT;
     
-    return foundCookies && hasEnoughSize ? button : null;
+    return foundCookies && hasEnoughSize ? element : null;
   };
   
   const run = () => {
-    const checkButtonsIn = (element) => {
-      const buttons = Array.from(element.querySelectorAll('button'));
+    const checkElementsIn = (element) => {
+      const elements = Array.from(element.querySelectorAll('button, a'));
               
-      for (let button of buttons) {
-        if (isPossibleAcceptCookies(button)) {
-          return button;
+      for (let element of elements) {
+        if (isPossibleAcceptCookies(element)) {
+          return element;
         }
       }
     };
 
-    const buildRuleAndClick = (button) => {
-      if (!button) { return; }
+    const buildRuleAndClick = (element) => {
+      if (!element) { return; }
 
-      const selector = buildSelector(button).join(' > ');
-      clickElement(button, selector, 0);
+      const selector = buildSelector(element).join(' > ');
+      clickElement(element, selector, 0);
     };
 
-    const possibleButton = checkButtonsIn(document.body);
+    const possibleElement = checkElementsIn(document.body);
 
-    if (possibleButton) {
-      buildRuleAndClick(possibleButton);
+    if (possibleElement) {
+      buildRuleAndClick(possibleElement);
     } else {
       const observer = new MutationObserver((mutationsList) => {
         const findPossibleCookie = () => {
@@ -126,21 +135,22 @@
               const nodes = Array.from(mutation.addedNodes);
     
               for (const node of nodes) {
-                if (node instanceof HTMLButtonElement && isPossibleAcceptCookies(node)) {
+                const isTarget = node instanceof HTMLButtonElement || node instanceof HTMLAnchorElement
+                if (isTarget && isPossibleAcceptCookies(node)) {
                   
                   return node;
                 } else if (node.nodeType == Node.ELEMENT_NODE) {
-                  checkButtonsIn(node);
+                  checkElementsIn(node);
                 }
               }
             }
           }
         }
     
-        const button = findPossibleCookie();
+        const element = findPossibleCookie();
         
-        if (button) {
-          buildRuleAndClick(button);
+        if (element) {
+          buildRuleAndClick(element);
           observer.disconnect();
         }
       });
