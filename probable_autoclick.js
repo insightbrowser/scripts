@@ -107,13 +107,15 @@
   
   const run = () => {
     const checkElementsIn = (element) => {
-      const elements = Array.from(element.querySelectorAll('button, a'));
-              
-      for (let element of elements) {
-        if (isPossibleAcceptCookies(element)) {
-          return element;
+      try {
+        const elements = Array.from(element.querySelectorAll('button, a'));
+
+        for (let element of elements) {        
+          if (isPossibleAcceptCookies(element)) {
+            return element;
+          }
         }
-      }
+      } catch {}
     };
 
     const buildRuleAndClick = (element) => {
@@ -135,12 +137,16 @@
               const nodes = Array.from(mutation.addedNodes);
     
               for (const node of nodes) {
-                const isTarget = node instanceof HTMLButtonElement || node instanceof HTMLAnchorElement
+                const isTarget = node instanceof HTMLButtonElement || node instanceof HTMLAnchorElement;
+                
                 if (isTarget && isPossibleAcceptCookies(node)) {
-                  
                   return node;
                 } else if (node.nodeType == Node.ELEMENT_NODE) {
-                  checkElementsIn(node);
+                  const possibleElement = checkElementsIn(node);
+                  
+                  if (possibleElement) {
+                    return possibleElement;
+                  }
                 }
               }
             }
