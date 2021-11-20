@@ -3,6 +3,10 @@
       {
         "name": "ios_referral_system",
         "enabled": false
+      },
+      {
+        "name": "ios_notification_system",
+        "enabled": false
       }
     ]
 }
