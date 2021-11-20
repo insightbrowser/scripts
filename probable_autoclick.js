@@ -69,7 +69,7 @@
       }
     }
   
-    const mustHaveWords = [ 'ok', 'accept', 'yes', 'continue', 'agree' ];
+    const mustHaveWords = [ 'ok', 'accept', 'yes', 'continue', 'agree', 'allow' ];
 
     // Since we don't know the order of the element we are testing in the modal
     // Let's look for the ones with positive words
