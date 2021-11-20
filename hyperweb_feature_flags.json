@@ -6,7 +6,7 @@
       },
       {
         "name": "ios_notification_system",
-        "enabled": true
+        "enabled": false
       }
     ]
 }
