@@ -69,7 +69,12 @@
       }
     }
   
-    const mustHaveWords = [ 'ok', 'accept', 'yes', 'continue', 'agree', 'allow' ];
+    const mustHaveWords = [
+      'ok', 'accept', 'yes', 'continue', 'agree', 'allow',
+      'aceito', 'sim', 'continuar', 'aceito', 'aceitar', 'permitir', 'prosseguir',
+      'akzeptieren', 'ja', 'weiter', 'zustimmen', 'erlauben',
+      '好的', '接受', '是的', '继续', '同意', '允许',
+    ];
 
     // Since we don't know the order of the element we are testing in the modal
     // Let's look for the ones with positive words
