@@ -1,7 +1,8 @@
 try {
-  [ ...document.getElementsByTagName('a') ].forEach(a => {
-    if (a.href.includes('insightbrowser')) {
-        a.href = a.href.replace('insightbrowser', 'hyperweb')
+  const array = Array.from(document.getElementsByTagName('a'));
+  array.forEach(a => {
+    if (a.href.includes('insightbrowser://open-augmentation')) {
+      a.href = a.href.replace('insightbrowser', 'hyperweb');
     }
   })
 } catch {}
