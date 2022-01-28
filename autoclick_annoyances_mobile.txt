@@ -14,3 +14,4 @@ www.nytimes.com##.ReactModal__Overlay button
 www.nytimes.com###vi_welcome_close
 instagram.com##button span[aria-label=Close]
 www.bbc.*##button.tp-close.tp-active
+www.google.*###stUuGf div div.FAVrq.VDgVie.it9gVe.gdwOPe.mB14jb.eofmDb div.uysxde.KKUuQd div.LXauYe div.MSvubc span.i6Jlpe.z1asCe.wuXmqc
