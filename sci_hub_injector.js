@@ -8,5 +8,5 @@
 // @grant GM.openInTab
 // ==/UserScript==
 
-const cb = () => GM.openInTab(`https://sci-hub.hkvisa.net${document.location.href}`);
+const cb = () => GM.openInTab(`https://sci-hub.hkvisa.net/${document.location.href}`);
 GM.registerButton('sci-hub', 'Open this page on Sci-Hub', null, cb);
