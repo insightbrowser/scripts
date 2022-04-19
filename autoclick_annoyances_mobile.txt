@@ -16,3 +16,4 @@ instagram.com##button span[aria-label=Close]
 instagram.com##.Z_Gl2 button.wpO6b
 www.bbc.*##button.tp-close.tp-active
 www.google.*###stUuGf div div.FAVrq.VDgVie.it9gVe.gdwOPe.mB14jb.eofmDb div.uysxde.KKUuQd div.LXauYe div.MSvubc span.i6Jlpe.z1asCe.wuXmqc
+zoom.us###onetrust-banner-sdk .onetrust-close-btn-handler
