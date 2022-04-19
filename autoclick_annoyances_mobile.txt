@@ -18,3 +18,4 @@ www.bbc.*##button.tp-close.tp-active
 www.google.*###stUuGf div div.FAVrq.VDgVie.it9gVe.gdwOPe.mB14jb.eofmDb div.uysxde.KKUuQd div.LXauYe div.MSvubc span.i6Jlpe.z1asCe.wuXmqc
 zoom.us###onetrust-banner-sdk .onetrust-close-btn-handler
 tiktok.com##.guide-container .not-now
+msn.com###onetrust-banner-sdk #onetrust-accept-btn-handler
