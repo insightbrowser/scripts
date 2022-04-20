@@ -22,3 +22,4 @@ tiktok.com##.guide-container .not-now
 msn.com###onetrust-banner-sdk #onetrust-accept-btn-handler
 weather.com###truste-consent-content #truste-consent-button
 *###onetrust-consent-sdk .banner-close-button
+espn.com##div.ad-slot.ad-slot-overlay iframe%hw%div.GoogleActiveViewElement section#overlay div#overlaybg p a.sprite.close
