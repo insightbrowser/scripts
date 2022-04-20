@@ -23,3 +23,5 @@ msn.com###onetrust-banner-sdk #onetrust-accept-btn-handler
 weather.com###truste-consent-content #truste-consent-button
 *###onetrust-consent-sdk .banner-close-button
 espn.com##div.ad-slot.ad-slot-overlay iframe%hw%div.GoogleActiveViewElement section#overlay div#overlaybg p a.sprite.close
+search.yahoo.com##iframe#guce-inline-consent-iframe%hw%div#shadow-wrapper > div.reg > form.consent-form > button.btn.consent-button.cta
+accuweather.com##div.template-root div.privacy-policy-banner div.banner-body div.banner-button.policy-accept
