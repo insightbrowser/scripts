@@ -13,6 +13,7 @@ www.quora.com##.kPwyaT button
 www.nytimes.com##.ReactModal__Overlay button
 www.nytimes.com###vi_welcome_close
 www.nytimes.com##.gdpr.expanded-dock button[data-testid="expanded-dock-btn-selector"]
+www.nytimes.com##.banner__container .banner__container__closeAsset
 instagram.com##button span[aria-label=Close]
 instagram.com##.Z_Gl2 button.wpO6b
 www.bbc.*##button.tp-close.tp-active
