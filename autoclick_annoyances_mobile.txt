@@ -31,4 +31,8 @@ stackoverflow.com##button.js-accept-cookies.js-consent-banner-hide
 globo.com##button.cookie-banner-lgpd_accept-button
 ups.com##div.implicit_privacy_prompt.implicit_consent button.close_btn_thick span.icon.ups-icon-close
 kohls.com###hp-banner2-drawer .drawer-controls button
+lowes.com###branch-banner-iframe%hw%.branch-banner-close
 t-mobile.com##.xpr-cookieModal .phx-modal__close
+healthline.com###ccpa-banner .accept
+healthline.com##.css-yya393 .window-close-button
+healthline.com##.css-pdceuf .icon-hl-close-thick
