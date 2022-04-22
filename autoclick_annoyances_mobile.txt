@@ -20,9 +20,9 @@ www.bbc.*##button.tp-close.tp-active
 www.google.*###stUuGf div div.FAVrq.VDgVie.it9gVe.gdwOPe.mB14jb.eofmDb div.uysxde.KKUuQd div.LXauYe div.MSvubc span.i6Jlpe.z1asCe.wuXmqc
 zoom.us###onetrust-banner-sdk .onetrust-close-btn-handler
 tiktok.com##.guide-container .not-now
-msn.com###onetrust-banner-sdk #onetrust-accept-btn-handler
 weather.com###truste-consent-content #truste-consent-button
 *###onetrust-consent-sdk .banner-close-button
+*###onetrust-banner-sdk #onetrust-accept-btn-handler
 espn.com##div.ad-slot.ad-slot-overlay iframe%hw%div.GoogleActiveViewElement section#overlay div#overlaybg p a.sprite.close
 search.yahoo.com##iframe#guce-inline-consent-iframe%hw%div#shadow-wrapper > div.reg > form.consent-form > button.btn.consent-button.cta
 accuweather.com##div.template-root div.privacy-policy-banner div.banner-body div.banner-button.policy-accept
@@ -37,4 +37,5 @@ healthline.com###ccpa-banner .accept
 healthline.com##.css-yya393 .window-close-button
 healthline.com##.css-pdceuf .icon-hl-close-thick
 jivox.com###catapult-cookie-bar #catapultCookie
-criteo.com###onetrust-banner-sdk #onetrust-accept-btn-handler
+cnbc.com##.fEy1Z2XT ._4ao5eF8B
+yelp.com##.banner__09f24__A12gg .icon--16-close-v2
