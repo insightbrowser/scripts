@@ -39,3 +39,5 @@ healthline.com##.css-pdceuf .icon-hl-close-thick
 jivox.com###catapult-cookie-bar #catapultCookie
 cnbc.com##.fEy1Z2XT ._4ao5eF8B
 yelp.com##.banner__09f24__A12gg .icon--16-close-v2
+archiveofourown.org###tos_prompt .confirmation #tos_agree
+archiveofourown.org###tos_prompt .submit #accept_tos
