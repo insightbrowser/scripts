@@ -1,4 +1,4 @@
-var adBlockers = [
+const adBlockers = [
   {
     "site": "twitter.com",
     "adText": "Promoted",
@@ -84,9 +84,9 @@ var adBlockers = [
 ]
 
 
-var host = document.location.host.replace('www.', '');
+const host = document.location.host.replace('www.', '');
 
-var adBlocks = adBlockers.filter(adBlock => {
+const adBlocks = adBlockers.filter(adBlock => {
   var site = adBlock.site.split(',');
   return site.includes(host);
 });
@@ -107,10 +107,15 @@ adBlocks.forEach((adBlock) => {
       }
       adBlockNodes(nodes, adElementSelector);
   }, 1000);
-})
+});
 
+const parentIsAdBlocked = (element) => {
+  if (element === document.body) { return false; }
+  return element.getAttribute('adblocked') === 'true' || 
+    element.parentNode && parentIsAdBlocked(element.parentNode);
+};
 
-function adBlockNodes(nodes, adElementSelector) {
+const adBlockNodes = (nodes, adElementSelector) => {
   for (let node of nodes) {
       let adstory = node.closest(adElementSelector)
       
@@ -118,31 +123,36 @@ function adBlockNodes(nodes, adElementSelector) {
       if (!adstory || adstory.getAttribute('adblocked') === 'true') {
           continue;
       }
+
+      // Preventing ad block inside ad block
+      if (adstory.parentNode && parentIsAdBlocked(adstory.parentNode)) {
+          continue;
+      }
       
-      adstory.setAttribute('adblocked', 'true')
+      adstory.setAttribute('adblocked', 'true');
 
       let overlay = document.createElement('div')
       overlay.setAttribute('style', `
           font-family: -apple-system, BlinkMacSystemFont, sans-serif;
           position: absolute; left: 0; top: 0; right: 0; bottom: 0;
           background: linear-gradient(hsla(0,0%,100%,.9) 0%,#fff);
-          z-index: 2147483647`)
-      overlay.setAttribute('class', 'adblock')
-      let overlaytext = document.createElement('div')
+          z-index: 2147483647`);
+      overlay.setAttribute('class', 'adblock');
+      let overlaytext = document.createElement('div');
       overlaytext.setAttribute('style', `
           position: absolute; left: 20px; top: 30px;
           font-weight: bold;
           font-size: 24px;
           color:#444;`)
-      overlaytext.innerText = 'Ad'
-      let overlaytextinner = document.createElement('div')
+      overlaytext.innerText = 'Ad';
+      let overlaytextinner = document.createElement('div');
       overlaytextinner.setAttribute('style', `
           font-weight: normal;
           margin-top: 10px;
-          font-size: 16px;`)
-          overlaytextinner.innerText = 'Tap to show likely ad.'
-      overlay.appendChild(overlaytext)
-      overlaytext.appendChild(overlaytextinner)
+          font-size: 16px;`);
+          overlaytextinner.innerText = 'Blocked by Hyperweb. Tap to show likely ad.'
+      overlay.appendChild(overlaytext);
+      overlaytext.appendChild(overlaytextinner);
       overlay.addEventListener("click", (e) => {
           if (adstory.getAttribute('adblock-protected') !== 'true') {
               e.preventDefault();
@@ -150,14 +160,14 @@ function adBlockNodes(nodes, adElementSelector) {
               ol.parentElement.style.maxHeight = 'none';
               ol.parentElement.style.overflow = 'auto';
               ol.parentNode.removeChild(ol);
-              adstory.setAttribute('adblock-protected', 'true')
+              adstory.setAttribute('adblock-protected', 'true');
           }
       });
       if (adstory.querySelectorAll('.adblock').length === 0 && adstory.getAttribute('adblock-protected') !== 'true') {
           adstory.style.position = "relative"
           adstory.style.maxHeight = '120px';
           adstory.style.overflow = 'hidden';
-          adstory.insertBefore(overlay, adstory.firstChild)
+          adstory.insertBefore(overlay, adstory.firstChild);
       }
   }
-} 
+};
