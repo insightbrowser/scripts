@@ -8,6 +8,7 @@
 // @match        www.youtube-nocookie.com
 // @match        music.youtube.com
 // @grant        GM.notification
+// @license      LGPL-3.0-or-later
 // @noframes
 // ==/UserScript==
 
